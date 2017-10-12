@@ -19,7 +19,6 @@
 
 PRODUCT_PACKAGES := \
     CarrierConfig \
-    CarrierDefaultApp \
     Dialer \
     CallLogBackup \
     CellBroadcastReceiver \
