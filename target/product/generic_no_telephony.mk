@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     vibrator.default \
     power.default
 
-ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
+ifneq ($(filter marlin sailfish kenzo,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES := \
         frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
 endif

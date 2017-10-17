@@ -100,7 +100,7 @@ PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 	device/generic/goldfish/audio_policy.conf:system/etc/audio_policy.conf
 
-ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
+ifneq ($(filter marlin sailfish kenzo,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES := \
         frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf
 endif
