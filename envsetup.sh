@@ -1680,14 +1680,12 @@ function provision()
     "$ANDROID_PRODUCT_OUT/provision-device" "$@"
 }
 
-if [ "x$SHELL" != "x/bin/bash" ]; then
-
 function make()
 {
     mk_timer $(get_make_command) "$@"
 }
 
-function __detect_shell() {
+if [ "x$SHELL" != "x/bin/bash" ]; then
     case `ps -o command -p $$` in
         *bash*)
             ;;
